@@ -1,14 +1,14 @@
 //Pin definitions
 const int batteryPin = A7;
 const int ledPin = 13;
-const int mosfetGatePin = 4;
+const int mosfetGatePin = 3;
 
 //Auxiliary values
-const float refVoltage = 4.86;
-const float vDividerFactor = 2.0;
-const float batMaxVoltage = 8.4; //2s LiPo battery, i.e. 2*4.2V. Use sightly lower values to preserve battery heatlh.
-const float batMinVoltage = 7.9; //If battery falls below this voltage, we always turn on charge
-const int secondsBetweenChecks = 0.25;
+const float refVoltage = 5.01;
+const float vDividerFactor = 5.7; //47K & 10K voltage divider, (47+10)/10 to recover original value
+const float batMaxVoltage = 8.42; //2s LiPo battery, i.e. 2*4.2V. Use sightly lower values to preserve battery heatlh.
+const float batMinVoltage = 8.0; //If battery falls below this voltage, we always turn on charge
+const int secondsBetweenChecks = 0.5;
 
 //Global definitions
 float vBat = 0.0;
